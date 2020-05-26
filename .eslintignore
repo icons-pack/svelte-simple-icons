@@ -1,0 +1,10 @@
+dist
+build
+lib
+.cache
+node_modules
+scripts
+
+# Cruft
+.DS_Store
+npm-debug.log
