@@ -2,16 +2,18 @@
   "name": "@icons-pack/svelte-simple-icons",
   "version": "1.0.0",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "This package provides the Simple Icons packaged as a set of Svelte components.",
   "repository": "git@github.com:icons-pack/svelte-simple-icons.git",
   "author": "Jorge Luis Calleja <jorgelca1205@gmail.com>",
   "license": "MIT",
-  "svelte": "src/index.js",
+  "svelte": "build/index.js",
   "main": "build/index.js",
   "module": "build/index.mjs",
   "sideEffects": false,
   "files": [
-    "lib",
     "build"
   ],
   "keywords": [
@@ -26,11 +28,11 @@
     "codea"
   ],
   "scripts": {
+    "build": "yarn build:bundle",
+    "build:bundle": "yarn clean:build && rollup --config rollup.config.js",
     "clean:build": "rm -rf build",
     "clean:components": "rm -rf ./src/**",
-    "build:bundle": "yarn clean:build && rollup --config rollup.config.js",
-    "generate:components": "yarn clean:components && node scripts/generate-components",
-    "build": "yarn build:bundle",
+    "generate:components": "yarn clean:components && cross-env node scripts/generate-components",
     "prettier": "prettier --config .prettierrc \"./**/*.+(js|svelte)\" --write"
   },
   "lint-staged": {
