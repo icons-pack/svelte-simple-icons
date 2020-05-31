@@ -8,7 +8,7 @@ export default {
     {
       name: "svelte-simple-icons",
       file: "build/index.js",
-      format: "cjs",
+      format: "umd",
     },
     {
       file: "build/index.mjs",
