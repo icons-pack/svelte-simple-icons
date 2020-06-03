@@ -57,7 +57,7 @@
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-svelte": "^5.2.2",
     "signale": "^1.4.0",
-    "simple-icons": "^2.14.0",
+    "simple-icons": "^2.15.0",
     "svelte": "^3.22.3",
     "uppercamelcase": "^3.0.0"
   }
