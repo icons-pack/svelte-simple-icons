@@ -30,8 +30,8 @@
   "scripts": {
     "build": "yarn build:bundle",
     "build:bundle": "yarn clean:build && rollup --config rollup.config.js",
-    "clean:build": "rm -rf build",
-    "clean:components": "rm -rf ./src/**",
+    "clean:build": "rimraf -rf build",
+    "clean:components": "rimraf -rf ./src/**",
     "generate:components": "yarn clean:components && cross-env node scripts/generate-components",
     "prettier": "prettier --config .prettierrc \"./**/*.+(js|svelte)\" --write"
   },
@@ -57,7 +57,7 @@
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-svelte": "^5.2.2",
     "signale": "^1.4.0",
-    "simple-icons": "^2.15.0",
+    "simple-icons": "^2.16.0",
     "svelte": "^3.22.3",
     "uppercamelcase": "^3.0.0"
   }
