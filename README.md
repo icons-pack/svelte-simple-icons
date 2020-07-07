@@ -3,7 +3,7 @@
 
 # svelte-simple-icons
 
-This package provides the [Simple Icons 2.19.0](https://github.com/simple-icons/simple-icons/releases/tag/2.19.0 packaged as a set of [Svelte](https://svelte.dev/) components.
+This package provides the [Simple Icons 3.0.1](https://github.com/simple-icons/simple-icons/releases/tag/3.0.1) packaged as a set of [Svelte](https://svelte.dev/) components.
 
   <a href="https://www.npmjs.com/package/@icons-pack/svelte-simple-icons" target="_blank">
     <img src="https://img.shields.io/npm/v/@icons-pack/svelte-simple-icons?color=CB061D&style=flat-square" alt="www.npmjs.com!" />
@@ -53,7 +53,7 @@ These are some exceptions to this rule:
 - [`X.Org`](https://simpleicons.org/?q=x.Org) is exposed as `{ XDotOrg } from @icons-pack/svelte-simple-icons`
 - [`FerrarinDotVDot`](https://simpleicons.org/?q=Ferrari%20N.V) is exposed as `{ FerrarinDotVDot } from @icons-pack/svelte-simple-icons`
 
-## Example
+## Basic example
 
 ```svelte
   <script>
@@ -65,4 +65,32 @@ These are some exceptions to this rule:
   <ReactJs color="#61DAFB" size={50} />
 
   <Docker />
+```
+
+## Change title
+
+```svelte
+  <!-- title default "Svelte" -->
+  <script>
+    import { Svelte } from "@icons-pack/svelte-simple-icons";
+  </script>
+
+  <Svelte title="My title" />
+```
+
+## Custom styles
+
+```svelte
+  <script>
+    import { Svelte } from "@icons-pack/svelte-simple-icons";
+  </script>
+
+  <Svelte class="myStyle" />
+
+  <style>
+    .myStyle {
+      width: 35px;
+      height: 35px;
+    }
+  </style>
 ```
