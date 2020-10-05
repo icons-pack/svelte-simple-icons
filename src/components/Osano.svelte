@@ -2,11 +2,11 @@
     <script>
       export let color = 'currentColor';
       export let size = 24;
-      export let title = "Flutter";
+      export let title = "Osano";
     </script>
 
     <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill={color} viewBox="0 0 24 24">
       <title>{title}</title>
-      <path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.357zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.37z" />
+      <path d="M12 6.091A5.909 5.909 0 1017.909 12 5.91 5.91 0 0012 6.091M12 0A12 12 0 110 12 12 12 0 0112 0z" />
     </svg>
   
