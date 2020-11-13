@@ -14,6 +14,7 @@
   "module": "build/index.mjs",
   "sideEffects": false,
   "files": [
+    "lib",
     "build"
   ],
   "keywords": [
@@ -28,11 +29,12 @@
     "codea"
   ],
   "scripts": {
-    "build": "yarn build:bundle",
-    "build:bundle": "yarn clean:build && rollup --config rollup.config.js",
-    "clean:build": "rimraf -rf build",
-    "clean:components": "rimraf -rf ./src/**",
+    "build": "yarn clean && yarn build:bundle && yarn build:lib",
+    "build:bundle": "rollup --config rollup.config.js",
+    "clean": "rimraf build && rimraf lib",
+    "build:lib": "cross-env node ./scripts/copy-files.js ./src/ ./lib/",
     "generate:components": "yarn clean:components && cross-env node scripts/generate-components",
+    "clean:components": "rimraf -rf ./src/**",
     "prettier": "prettier --config .prettierrc \"./**/*.+(js|svelte)\" --write"
   },
   "lint-staged": {
@@ -49,6 +51,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-svelte3": "^2.7.3",
+    "fs-extra": "^9.0.1",
     "prettier": "^2.0.5",
     "prettier-eslint": "^10.1.1",
     "prettier-plugin-svelte": "^1.1.0",
