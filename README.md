@@ -53,6 +53,10 @@ These are some exceptions to this rule:
 - [`X.Org`](https://simpleicons.org/?q=x.Org) is exposed as `{ XDotOrg } from @icons-pack/svelte-simple-icons`
 - [`FerrarinDotVDot`](https://simpleicons.org/?q=Ferrari%20N.V) is exposed as `{ FerrarinDotVDot } from @icons-pack/svelte-simple-icons`
 
+## Demo
+
+[Edit codesandbox](https://codesandbox.io/s/busy-satoshi-g52wq?file=/App.svelte)
+
 ## Basic example
 
 ```svelte
