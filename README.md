@@ -3,7 +3,7 @@
 
 # svelte-simple-icons
 
-This package provides the [Simple Icons 4.11.0](https://github.com/simple-icons/simple-icons/releases/tag/4.11.0) packaged as a set of [Svelte](https://svelte.dev/) components.
+This package provides the [Simple Icons 4.18.0](https://github.com/simple-icons/simple-icons/releases/tag/4.18.0) packaged as a set of [Svelte](https://svelte.dev/) components.
 
   <a href="https://www.npmjs.com/package/@icons-pack/svelte-simple-icons" target="_blank">
     <img src="https://img.shields.io/npm/v/@icons-pack/svelte-simple-icons?color=CB061D&style=flat-square" alt="www.npmjs.com!" />
@@ -52,6 +52,10 @@ These are some exceptions to this rule:
 - [`webcomponents.org`](https://simpleicons.org/?q=webcomponents.org) is exposed as `{ WebcomponentsDotOrg } from @icons-pack/svelte-simple-icons`
 - [`X.Org`](https://simpleicons.org/?q=x.Org) is exposed as `{ XDotOrg } from @icons-pack/svelte-simple-icons`
 - [`FerrarinDotVDot`](https://simpleicons.org/?q=Ferrari%20N.V) is exposed as `{ FerrarinDotVDot } from @icons-pack/svelte-simple-icons`
+
+## Demo
+
+[Edit codesandbox](https://codesandbox.io/s/busy-satoshi-g52wq?file=/App.svelte)
 
 ## Basic example
 
