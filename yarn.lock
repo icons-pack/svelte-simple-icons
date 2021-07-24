@@ -2181,10 +2181,10 @@ signale@^1.4.0:
     figures "^2.0.0"
     pkg-conf "^2.1.0"
 
-simple-icons@^4.23.0:
-  version "4.23.0"
-  resolved "https://registry.yarnpkg.com/simple-icons/-/simple-icons-4.23.0.tgz#3359c608264573518f8b42f4d77863ff2ba78031"
-  integrity sha512-6mnsZiVR80LMbMaprrWSmAEBzw3gjsMvy/vKnpt1etppDHFz1XVGlH8KJ1xutty4iQcRyidgebqHBqRfAr7qyQ==
+simple-icons@^5.7.0:
+  version "5.7.0"
+  resolved "https://registry.yarnpkg.com/simple-icons/-/simple-icons-5.7.0.tgz#11667c452e99db4f10d4c83c43409010cd81a2f4"
+  integrity sha512-o4wYNRDSvk3/1UFPxsDfeZzo/J/o8s42VERdtVhmt50/I0w5WkWTvDicv9htQ7Uaj8ZcUaduBmo6b2ZgzoOJnw==
 
 slice-ansi@^2.1.0:
   version "2.1.0"
