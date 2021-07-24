@@ -3,7 +3,7 @@
 
 # svelte-simple-icons
 
-This package provides the [Simple Icons 4.23.0](https://github.com/simple-icons/simple-icons/releases/tag/4.23.0) packaged as a set of [Svelte](https://svelte.dev/) components.
+This package provides the [Simple Icons 5.7.0](https://github.com/simple-icons/simple-icons/releases/tag/5.7.0) packaged as a set of [Svelte](https://svelte.dev/) components.
 
   <a href="https://www.npmjs.com/package/@icons-pack/svelte-simple-icons" target="_blank">
     <img src="https://img.shields.io/npm/v/@icons-pack/svelte-simple-icons?color=CB061D&style=flat-square" alt="www.npmjs.com!" />
