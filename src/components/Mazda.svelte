@@ -2,7 +2,7 @@
     <script>
       export let color = 'currentColor';
       export let size = 24;
-      export let title = "Mazda";
+      export let title = "mazda";
     </script>
 
     <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill={color} viewBox="0 0 24 24">
