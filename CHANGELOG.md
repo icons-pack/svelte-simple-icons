@@ -1,5 +1,11 @@
 # @icons-pack/svelte-simple-icons
 
+## 4.0.0-rc.1
+
+### Patch Changes
+
+- [`b85b376`](https://github.com/icons-pack/svelte-simple-icons/commit/b85b376df587778901d2f6de74468538ece5299d) Thanks [@wootsbot](https://github.com/wootsbot)! - Fixed expot module
+
 ## 4.0.0-rc.0
 
 ### Major Changes
