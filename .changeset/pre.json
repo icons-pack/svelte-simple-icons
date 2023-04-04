@@ -5,6 +5,7 @@
     "@icons-pack/svelte-simple-icons": "3.0.0"
   },
   "changesets": [
-    "lazy-feet-worry"
+    "lazy-feet-worry",
+    "rude-parrots-work"
   ]
 }
