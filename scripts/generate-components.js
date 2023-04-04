@@ -1,17 +1,23 @@
-const path = require("path");
-const fs = require("fs");
-const upperCamelCase = require("uppercamelcase");
+import path from "path";
+import { fileURLToPath } from "url";
+import fs from "fs";
+import upperCamelCase from "uppercamelcase";
 
-const SimpleIcons = require('simple-icons');
+import signale from "signale";
 
-const { titleToFilename, signale } = require("./utils");
+import * as SimpleIcons from "simple-icons/icons";
+
+import { titleToFilename } from "./utils.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const formatFile = "utf-8";
 const rootDir = path.join(__dirname, "..");
-const dir = path.join(rootDir, "src/");
-const outputComponent = "src/components";
+const dir = path.join(rootDir, "src/lib/");
+const outputComponent = "src/lib/components";
 
-const pathIndexExport = path.join(rootDir, "src", "index.js");
+const pathIndexExport = path.join(rootDir, "src/lib", "index.js");
 
 const ICONS = Object.keys(SimpleIcons);
 
@@ -39,16 +45,9 @@ const attrsToString = (attrs) => {
 
 ICONS.forEach((icon) => {
   const baseName = String(icon);
-  const componentName =
-    baseName === "React"
-      ? "ReactJs"
-      : upperCamelCase(titleToFilename(baseName));
+  const componentName = upperCamelCase(titleToFilename(baseName));
 
-  const locationOutputComponent = path.join(
-    rootDir,
-    `${outputComponent}/`,
-    `${componentName}.svelte`
-  );
+  const locationOutputComponent = path.join(rootDir, `${outputComponent}/`, `${componentName}.svelte`);
 
   const defaultAttrs = {
     xmlns: "http://www.w3.org/2000/svg",
@@ -62,7 +61,7 @@ ICONS.forEach((icon) => {
     <script>
       export let color = 'currentColor';
       export let size = 24;
-      export let title = "${baseName}";
+      export let title = "${SimpleIcons[baseName].title}";
     </script>
 
     <svg ${attrsToString(defaultAttrs)}>

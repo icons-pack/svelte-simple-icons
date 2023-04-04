@@ -1,0 +1,8 @@
+{
+  "mode": "pre",
+  "tag": "rc",
+  "initialVersions": {
+    "@icons-pack/svelte-simple-icons": "3.0.0"
+  },
+  "changesets": []
+}

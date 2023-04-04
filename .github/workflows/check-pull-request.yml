@@ -8,6 +8,9 @@ on:
     branches:
       - "main"
 
+env:
+  PNPM_VERSION: ${{ vars.PNPM_VERSION }}
+
 jobs:
   check_pull_request:
     runs-on: ubuntu-latest
@@ -17,17 +20,20 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-          cache: "yarn"
 
-      - name: 🧶 Setup yarn
-        run: corepack enable
+      - name: 🔥 Setup pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@${PNPM_VERSION} --activate
 
       - name: 📦 Install Dependencies
         run: |
-          yarn install --immutable
+          pnpm install --no-frozen-lockfile
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🔥 generate:components
-        run: yarn generate:components
+        run: pnpm run generate:components
 
       - name: 💣 build
-        run: yarn build
+        run: pnpm run build

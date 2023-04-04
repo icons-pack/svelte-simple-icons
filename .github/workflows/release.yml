@@ -7,8 +7,12 @@ on:
   push:
     branches:
       - main
+      - v4.0.0
   release:
     types: [created]
+
+env:
+  PNPM_VERSION: ${{ vars.PNPM_VERSION }}
 
 jobs:
   publish-npm:
@@ -19,29 +23,28 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-          cache: "yarn"
 
-      - name: 🧶 Setup yarn
-        run: corepack enable
+      - name: 🔥 Setup pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@${PNPM_VERSION} --activate
 
       - name: 📦 Install Dependencies
         run: |
-          yarn install --immutable
+          pnpm install --no-frozen-lockfile
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🔥 generate:components
-        run: yarn generate:components
+        run: pnpm run generate:components
 
       - name: 💣 build
-        run: yarn build
-
-      - name: Delete tags
-        run: |
-          git tag | xargs git tag -d
+        run: pnpm run build
 
       - name: Create Release Pull Request or Publish to GitHub Packages 📦
         uses: changesets/action@v1
         with:
-          publish: yarn release
+          publish: pnpm release
           commit: "ci(Release): version icons-pack/react-simple-icons"
           title: "ci(Release): version icons-pack/react-simple-icons"
         env:
