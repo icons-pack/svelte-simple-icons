@@ -1,5 +1,11 @@
 # @icons-pack/svelte-simple-icons
 
+## 4.0.0-rc.0
+
+### Major Changes
+
+- [`51a14a8`](https://github.com/icons-pack/svelte-simple-icons/commit/51a14a806a8a018fc54868c45a77e31a5a138e64) Thanks [@wootsbot](https://github.com/wootsbot)! - Use svelte kit
+
 ## 3.0.0
 
 ### Major Changes

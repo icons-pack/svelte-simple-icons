@@ -4,5 +4,7 @@
   "initialVersions": {
     "@icons-pack/svelte-simple-icons": "3.0.0"
   },
-  "changesets": []
+  "changesets": [
+    "lazy-feet-worry"
+  ]
 }
