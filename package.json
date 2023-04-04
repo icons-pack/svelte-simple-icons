@@ -9,6 +9,7 @@
   "author": "Jorge Luis Calleja <jorgelca1205@gmail.com>",
   "license": "MIT",
   "sideEffects": false,
+  "module": "./dist/index.js",
   "svelte": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
