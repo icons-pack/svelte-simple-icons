@@ -17,8 +17,10 @@ package-lock.json
 
 
 # Generated files
-*/*.js
-*/*.d.ts
+# !scripts/*.js
+# !scripts/*.d.ts
+# */*.js
+# */*.d.ts
 */*.d.ts.map
 src/lib/icons/*.svelte
 **/generated

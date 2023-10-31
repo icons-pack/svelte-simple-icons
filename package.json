@@ -36,7 +36,7 @@
   ],
   "scripts": {
     "clean": "rm -rf index.* package",
-    "build": "pnpm clean && pnpm check && svelte-package && node ./scripts/postbuild.js && rm -rf package",
+    "build": "pnpm clean && pnpm check && svelte-package && node ./scripts/clean_package.js && rm -rf package",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "clean:icons": "rm -rf ./src/lib/icons/**",
