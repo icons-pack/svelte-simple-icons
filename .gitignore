@@ -21,7 +21,7 @@ package-lock.json
 */*.js
 */*.d.ts
 */*.d.ts.map
-*/lib
+*/lib/icons/*.svelte
 **/generated
 icons/
 
