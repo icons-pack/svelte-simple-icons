@@ -1,5 +1,11 @@
 # @icons-pack/svelte-simple-icons
 
+## 4.0.0-beta.0
+
+### Major Changes
+
+- [`e9604c9`](https://github.com/icons-pack/svelte-simple-icons/commit/e9604c90e1ea77fb090419d848b51e14a5fde758) Thanks [@wootsbot](https://github.com/wootsbot)! - Rfc use vite, svelte-kit and strcuture
+
 ## 3.0.0
 
 ### Major Changes
