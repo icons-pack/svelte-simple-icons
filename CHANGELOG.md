@@ -1,5 +1,11 @@
 # @icons-pack/svelte-simple-icons
 
+## 4.0.0-rc.2
+
+### Patch Changes
+
+- [`6565791`](https://github.com/icons-pack/svelte-simple-icons/commit/6565791db506726d88cff703f62d7043390d9011) Thanks [@wootsbot](https://github.com/wootsbot)! - Fixed version
+
 ## 4.0.0-rc.1
 
 ### Minor Changes
