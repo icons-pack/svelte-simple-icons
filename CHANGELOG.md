@@ -1,5 +1,11 @@
 # @icons-pack/svelte-simple-icons
 
+## 4.0.0-rc.3
+
+### Patch Changes
+
+- [`de987a7`](https://github.com/icons-pack/svelte-simple-icons/commit/de987a794ea82e69680dadb910834c8088062645) Thanks [@wootsbot](https://github.com/wootsbot)! - Fixed use index module
+
 ## 4.0.0-rc.2
 
 ### Patch Changes
