@@ -1,8 +1,0 @@
-{
-  "mode": "exit",
-  "tag": "rc",
-  "initialVersions": {
-    "@icons-pack/svelte-simple-icons": "4.0.0-rc.1"
-  },
-  "changesets": ["lucky-pumas-approve"]
-}
