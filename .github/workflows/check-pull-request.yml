@@ -6,28 +6,37 @@ name: Check pull request
 on:
   pull_request:
     branches:
-      - "main"
+      - main
+
+env:
+  PNPM_VERSION: 8.10.0
 
 jobs:
   check_pull_request:
+    name: PR Stats
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
         with:
-          node-version: 16
+          fetch-depth: 2
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
           registry-url: https://registry.npmjs.org/
-          cache: "yarn"
 
-      - name: 🧶 Setup yarn
-        run: corepack enable
-
-      - name: 📦 Install Dependencies
+      - name: 🔥 Installing pnpm
         run: |
-          yarn install --immutable
+          corepack enable
+          corepack prepare pnpm@${{ env.PNPM_VERSION }} --activate
 
-      - name: 🔥 generate:components
-        run: yarn generate:components
+      - name: 📦 Install dependencies
+        run: |
+          pnpm install --no-frozen-lockfile
+
+      - name: 🔥 generate:icons
+        run: pnpm run generate:icons
 
       - name: 💣 build
-        run: yarn build
+        run: pnpm run build

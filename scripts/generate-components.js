@@ -1,17 +1,19 @@
-const path = require("path");
-const fs = require("fs");
-const upperCamelCase = require("uppercamelcase");
+import path from "path";
+import fs from "fs";
+import upperCamelCase from "uppercamelcase";
 
-const SimpleIcons = require('simple-icons');
+import * as SimpleIcons from "simple-icons";
 
-const { titleToFilename, signale } = require("./utils");
+import { titleToFilename } from "./utils.js";
+
+let __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 const formatFile = "utf-8";
 const rootDir = path.join(__dirname, "..");
-const dir = path.join(rootDir, "src/");
-const outputComponent = "src/components";
+const dir = path.join(rootDir, "src/lib/");
+const outputComponent = "src/lib/icons";
 
-const pathIndexExport = path.join(rootDir, "src", "index.js");
+const pathIndexExport = path.join(rootDir, "src/lib", "index.js");
 
 const ICONS = Object.keys(SimpleIcons);
 
@@ -75,15 +77,11 @@ ICONS.forEach((icon) => {
 
   fs.writeFileSync(locationOutputComponent, component, formatFile);
 
-  signale.success(`${componentName}`);
+  console.log(`${componentName}`);
 
-  const exportComponent = `export { default as ${componentName} } from './components/${componentName}.svelte';\r\n`;
+  const exportComponent = `export { default as ${componentName} } from './icons/${componentName}.svelte';\r\n`;
 
   fs.appendFileSync(pathIndexExport, exportComponent, formatFile);
 });
 
-signale.complete({
-  prefix: "[Components]",
-  message: "Ready components",
-  suffix: "(@wootsbot)",
-});
+console.log("Ready icons");
