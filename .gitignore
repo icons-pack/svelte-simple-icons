@@ -6,7 +6,6 @@ yarn-error.log*
 
 dist
 build
-lib
 .cache
 node_modules
 
@@ -21,9 +20,9 @@ package-lock.json
 */*.js
 */*.d.ts
 */*.d.ts.map
-*/lib/icons/*.svelte
+src/lib/icons/*.svelte
 **/generated
-icons/
+icons/**
 
 # SvelteKit
 index.*
