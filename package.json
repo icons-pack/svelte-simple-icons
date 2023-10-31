@@ -39,7 +39,7 @@
     "build": "pnpm clean && pnpm check && svelte-package && node ./scripts/postbuild.js && rm -rf package",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "clean:icons": "rimraf -rf ./src/components/**",
+    "clean:icons": "rimraf -rf ./src/icons/**",
     "generate:icons": "pnpm clean:icons && node ./scripts/generate-components.js",
     "changeset": "changeset",
     "version": "changeset version",
