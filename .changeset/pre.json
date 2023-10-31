@@ -5,6 +5,7 @@
     "@icons-pack/svelte-simple-icons": "4.0.0-rc.0"
   },
   "changesets": [
+    "dry-pears-act",
     "hip-fans-itch"
   ]
 }
