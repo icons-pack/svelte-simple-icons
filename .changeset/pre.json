@@ -1,10 +1,8 @@
 {
-  "mode": "pre",
-  "tag": "beta",
+  "mode": "exit",
+  "tag": "rc",
   "initialVersions": {
-    "@icons-pack/svelte-simple-icons": "4.0.0"
+    "@icons-pack/svelte-simple-icons": "4.0.0-rc.1"
   },
-  "changesets": [
-    "heavy-carrots-remember"
-  ]
+  "changesets": ["lucky-pumas-approve"]
 }
