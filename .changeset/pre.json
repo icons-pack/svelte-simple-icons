@@ -4,5 +4,7 @@
   "initialVersions": {
     "@icons-pack/svelte-simple-icons": "4.0.0"
   },
-  "changesets": []
+  "changesets": [
+    "heavy-carrots-remember"
+  ]
 }
