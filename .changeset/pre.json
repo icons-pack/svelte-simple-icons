@@ -5,6 +5,7 @@
     "@icons-pack/svelte-simple-icons": "3.0.0"
   },
   "changesets": [
-    "clean-mangos-laugh"
+    "clean-mangos-laugh",
+    "neat-ears-taste"
   ]
 }
