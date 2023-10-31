@@ -2,9 +2,7 @@
   "mode": "pre",
   "tag": "rc",
   "initialVersions": {
-    "@icons-pack/svelte-simple-icons": "4.0.0-rc.1"
+    "@icons-pack/svelte-simple-icons": "4.0.0-rc.0"
   },
-  "changesets": [
-    "hip-fans-itch"
-  ]
+  "changesets": []
 }
