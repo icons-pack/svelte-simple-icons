@@ -49,7 +49,7 @@ All icons are imported from a single file, where [ICON SLUG] is replaced by a ca
   // import { si[ICON SLUG] } from 'simple-icons'
 
   <script>
-    import { siReactJs, siSvelte, siDocker } from "@icons-pack/svelte-simple-icons";
+    import { siReact, siSvelte, siDocker } from "@icons-pack/svelte-simple-icons";
   </script>
 
   <siSvelte color="#FF3E00" size={90} />
