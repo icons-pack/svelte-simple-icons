@@ -36,22 +36,7 @@ npm add @icons-pack/svelte-simple-icons
 
 ## Usage
 
-You can use [simpleicons.org](https://simpleicons.org) to find a specific icon.
-When importing an icon, keep in mind that the names of the icons are [upperCamelCase](https://github.com/samverschueren/uppercamelcase) , for instance:
-
-- [`Material Design`](https://simpleicons.org/?q=material) is exposed as `{ Materialdesign } from @icons-pack/svelte-simple-icons`
-- [`azure devOps`](https://simpleicons.org/?q=azure%20devOps) is exposed as `{ Azuredevops } from @icons-pack/svelte-simple-icons`
-
-These are some exceptions to this rule:
-
-- [`500px`](https://simpleicons.org/?q=500px) is exposed as `{ FiveHundredPx } from @icons-pack/svelte-simple-icons`
-- [`c++`](https://simpleicons.org/?q=+) is exposed as `{ Cplusplus } from @icons-pack/svelte-simple-icons`
-- [`.Net`](https://simpleicons.org/?q=.net) is exposed as `{ DotNet } from @icons-pack/svelte-simple-icons`
-- [`D3.js`](https://simpleicons.org/?q=d3) is exposed as `{ D3DotJs } from @icons-pack/svelte-simple-icons`
-- [`dev.to`](https://simpleicons.org/?q=dev.to) is exposed as `{ DevDotTo } from @icons-pack/svelte-simple-icons`
-- [`webcomponents.org`](https://simpleicons.org/?q=webcomponents.org) is exposed as `{ WebcomponentsDotOrg } from @icons-pack/svelte-simple-icons`
-- [`X.Org`](https://simpleicons.org/?q=x.Org) is exposed as `{ XDotOrg } from @icons-pack/svelte-simple-icons`
-- [`FerrarinDotVDot`](https://simpleicons.org/?q=Ferrari%20N.V) is exposed as `{ FerrarinDotVDot } from @icons-pack/svelte-simple-icons`
+All icons are imported from a single file, where [ICON SLUG] is replaced by a capitalized [slug](https://github.com/simple-icons/simple-icons/blob/master/slugs.md).
 
 ## Demo
 
@@ -60,15 +45,18 @@ These are some exceptions to this rule:
 ## Basic example
 
 ```svelte
+  // Import a specific icon by its slug as:
+  // import { si[ICON SLUG] } from 'simple-icons'
+
   <script>
-    import { ReactJs, Svelte, Docker } from "@icons-pack/svelte-simple-icons";
+    import { siReactJs, siSvelte, siDocker } from "@icons-pack/svelte-simple-icons";
   </script>
 
-  <Svelte color="#FF3E00" size={90} />
+  <siSvelte color="#FF3E00" size={90} />
 
-  <ReactJs color="#61DAFB" size={50} />
+  <siReactJs color="#61DAFB" size={50} />
 
-  <Docker />
+  <siDocker />
 ```
 
 ## Change title
@@ -76,20 +64,20 @@ These are some exceptions to this rule:
 ```svelte
   <!-- title default "Svelte" -->
   <script>
-    import { Svelte } from "@icons-pack/svelte-simple-icons";
+    import { siSvelte } from "@icons-pack/svelte-simple-icons";
   </script>
 
-  <Svelte title="My title" />
+  <siSvelte title="My title" />
 ```
 
 ## Custom styles
 
 ```svelte
   <script>
-    import { Svelte } from "@icons-pack/svelte-simple-icons";
+    import { siSvelte } from "@icons-pack/svelte-simple-icons";
   </script>
 
-  <Svelte class="myStyle" />
+  <siSvelte class="myStyle" />
 
   <style>
     .myStyle {
