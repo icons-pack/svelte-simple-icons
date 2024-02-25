@@ -45,18 +45,18 @@ All icons are imported from a single file, where [ICON SLUG] is replaced by a ca
 ## Basic example
 
 ```svelte
-  // Import a specific icon by its slug as:
-  // import { si[ICON SLUG] } from 'simple-icons'
+  <!-- Import a specific icon by its slug as: -->
+  <!-- import { Si[ICON SLUG] } from 'simple-icons'; -->
 
   <script>
-    import { siReact, siSvelte, siDocker } from "@icons-pack/svelte-simple-icons";
+    import { SiReact, SiSvelte, SiDocker } from "@icons-pack/svelte-simple-icons";
   </script>
 
-  <siSvelte color="#FF3E00" size={90} />
+  <SiSvelte color="#FF3E00" size={90} />
 
-  <siReactJs color="#61DAFB" size={50} />
+  <SiReactJs color="#61DAFB" size={50} />
 
-  <siDocker />
+  <SiDocker />
 ```
 
 ## Change title
@@ -64,20 +64,20 @@ All icons are imported from a single file, where [ICON SLUG] is replaced by a ca
 ```svelte
   <!-- title default "Svelte" -->
   <script>
-    import { siSvelte } from "@icons-pack/svelte-simple-icons";
+    import { SiSvelte } from "@icons-pack/svelte-simple-icons";
   </script>
 
-  <siSvelte title="My title" />
+  <SiSvelte title="My title" />
 ```
 
 ## Custom styles
 
 ```svelte
   <script>
-    import { siSvelte } from "@icons-pack/svelte-simple-icons";
+    import { SiSvelte } from "@icons-pack/svelte-simple-icons";
   </script>
 
-  <siSvelte class="myStyle" />
+  <SiSvelte class="myStyle" />
 
   <style>
     .myStyle {
