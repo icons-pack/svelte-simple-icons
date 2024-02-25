@@ -13,7 +13,7 @@ if (__dirname.match(/^\/\w:\//)) {
 }
 
 const root = path.join(__dirname, "..");
-const pkgDir = path.join(root, "package");
+const pkgDir = path.join(root, ".svelte-kit/__package__");
 
 await fs.cp(pkgDir, root, {
   recursive: true,

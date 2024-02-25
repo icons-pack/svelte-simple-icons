@@ -1,10 +1,9 @@
-import path from "path";
 import fs from "fs";
+import path from "path";
 import upperCamelCase from "uppercamelcase";
 
 import * as SimpleIcons from "simple-icons";
 
-import { titleToFilename } from "./utils.js";
 
 let __dirname = path.dirname(new URL(import.meta.url).pathname);
 
@@ -13,7 +12,7 @@ const rootDir = path.join(__dirname, "..");
 const dir = path.join(rootDir, "src/lib/");
 const outputComponent = "src/lib/icons";
 
-const pathIndexExport = path.join(rootDir, "src/lib", "index.js");
+const pathIndexExport = path.join(rootDir, "src/lib", "index.ts");
 
 const ICONS = Object.keys(SimpleIcons);
 
@@ -41,10 +40,7 @@ const attrsToString = (attrs) => {
 
 ICONS.forEach((icon) => {
   const baseName = String(icon);
-  const componentName =
-    baseName === "React"
-      ? "ReactJs"
-      : upperCamelCase(titleToFilename(baseName));
+  const componentName = upperCamelCase(baseName);
 
   const locationOutputComponent = path.join(
     rootDir,

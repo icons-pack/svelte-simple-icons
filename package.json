@@ -16,6 +16,7 @@
   "exports": {
     ".": {
       "types": "./index.d.ts",
+      "svelte": "./index.js",
       "import": "./index.js"
     },
     "./package.json": "./package.json"
@@ -38,7 +39,7 @@
   ],
   "scripts": {
     "clean": "rm -rf index.* package",
-    "build": "pnpm clean && pnpm check && svelte-package && node ./scripts/clean_package.js && rm -rf package",
+    "build": "pnpm clean && pnpm check && svelte-package && node ./scripts/clean_package.js",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "clean:icons": "rm -rf ./src/lib/icons/**",
@@ -48,22 +49,23 @@
     "release": "changeset publish"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "^0.4.4",
-    "@changesets/cli": "^2.22.0",
-    "@sveltejs/adapter-auto": "^1.0.0",
-    "@sveltejs/kit": "^1.0.0",
-    "@sveltejs/package": "^1.0.0",
-    "tslib": "^2.4.1",
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "^2.27.1",
+    "@sveltejs/adapter-auto": "^3.0.0",
+    "@sveltejs/kit": "^2.5.0",
+    "@sveltejs/package": "^2.2.5",
+    "@sveltejs/vite-plugin-svelte": "^3.0.2",
     "signale": "^1.4.0",
-    "simple-icons": "9.19.0",
-    "svelte": "^3.54.0",
-    "svelte-check": "^2.9.2",
+    "simple-icons": "11.5.0",
+    "svelte": "^4.2.0",
+    "svelte-check": "^3.6.0",
+    "tslib": "^2.6.2",
+    "typescript": "5.2.2",
     "uppercamelcase": "^3.0.0",
-    "vite": "^4.0.5",
-    "typescript": "5.2.2"
+    "vite": "^5.0.0"
   },
   "peerDependencies": {
-    "@sveltejs/kit": "^1.0.0",
-    "svelte": "^3.54.0 || ^4.0.0"
+    "@sveltejs/kit": "^2.5.0",
+    "svelte": "^4.2.0"
   }
 }
