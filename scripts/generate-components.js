@@ -12,7 +12,7 @@ const rootDir = path.join(__dirname, "..");
 const dir = path.join(rootDir, "src/lib/");
 const outputComponent = "src/lib/icons";
 
-const pathIndexExport = path.join(rootDir, "src/lib", "index.js");
+const pathIndexExport = path.join(rootDir, "src/lib", "index.ts");
 
 const ICONS = Object.keys(SimpleIcons);
 

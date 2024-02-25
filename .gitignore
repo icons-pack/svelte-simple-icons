@@ -30,6 +30,6 @@ icons/**
 index.*
 client.*
 .svelte-kit
-package
+icons/
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
