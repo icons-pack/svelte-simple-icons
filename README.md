@@ -86,3 +86,17 @@ All icons are imported from a single file, where [ICON SLUG] is replaced by a ca
     }
   </style>
 ```
+
+## Faster Compilations
+
+If you only need a few icons, you can import them individually instead of the entire file to improve compilation.
+
+```svelte
+<script>
+  import SiSvelte from "@icons-pack/svelte-simple-icons/icons/SiSvelte.svelte";
+  import SiGithub from "@icons-pack/svelte-simple-icons/icons/SiGithub.svelte";
+</script>
+
+<SiGithub />
+<SiSvelte />
+```
