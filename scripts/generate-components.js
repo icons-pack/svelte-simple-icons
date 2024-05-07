@@ -38,6 +38,14 @@ const attrsToString = (attrs) => {
     .join(" ");
 };
 
+const exportType = `
+import type { ComponentType, SvelteComponent } from 'svelte';
+
+export type SiComponentType = ComponentType<SvelteComponent<{ color?: string; size?: string; title?: string; }>>;
+
+`
+fs.appendFileSync(pathIndexExport, exportType, formatFile);
+
 ICONS.forEach((icon) => {
   const baseName = String(icon);
   const componentName = upperCamelCase(baseName);
@@ -72,8 +80,6 @@ ICONS.forEach((icon) => {
   const component = element;
 
   fs.writeFileSync(locationOutputComponent, component, formatFile);
-
-  console.log(`${componentName}`);
 
   const exportComponent = `export { default as ${componentName} } from './icons/${componentName}.svelte';\r\n`;
 
