@@ -1,5 +1,11 @@
 # @icons-pack/svelte-simple-icons
 
+## 4.0.1
+
+### Patch Changes
+
+- [`64d3430`](https://github.com/icons-pack/svelte-simple-icons/commit/64d3430b2e569cf3a36a89b218c64eb5759fdf27) Thanks [@wootsbot](https://github.com/wootsbot)! - fix exact devDependencies
+
 ## 4.0.0
 
 ### Major Changes
