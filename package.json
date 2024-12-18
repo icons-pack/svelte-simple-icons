@@ -4,15 +4,15 @@
 	"publishConfig": {
 		"access": "public"
 	},
+	"engines": {
+		"node": ">=20",
+		"pnpm": ">=9"
+	},
 	"type": "module",
 	"main": "./index.js",
 	"module": "./index.js",
 	"types": "./index.d.ts",
-	"files": [
-		"icons",
-		"index.*",
-		"src"
-	],
+	"files": ["icons", "index.*", "src"],
 	"exports": {
 		".": {
 			"types": "./index.d.ts",
