@@ -1,14 +1,10 @@
 {
-  "$schema": "https://unpkg.com/@changesets/config@2.0.0/schema.json",
-  "changelog": [
-    "@changesets/changelog-github",
-    { "repo": "icons-pack/svelte-simple-icons" }
-  ],
-  "commit": false,
-  "fixed": [],
-  "linked": [],
-  "access": "restricted",
-  "baseBranch": "main",
-  "updateInternalDependencies": "patch",
-  "ignore": []
+	"changelog": [
+		"@changesets/changelog-github",
+		{ "repo": "icons-pack/svelte-simple-icons" }
+	],
+	"baseBranch": "main",
+	"commit": false,
+	"access": "public",
+	"updateInternalDependencies": "patch"
 }
