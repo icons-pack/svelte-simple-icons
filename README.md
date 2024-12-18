@@ -86,3 +86,56 @@ All icons are imported from a single file, where [ICON SLUG] is replaced by a ca
     }
   </style>
 ```
+
+## Type Definition for Dynamic Icons in Svelte Components
+
+Sometimes, we want to provide the component dynamically to a component. We can do that by using `svelte:component` feature with the
+helper type `SiComponentType` type definition.
+
+```svelte
+<script lang="ts">
+  import type { SiComponentType } from '@icons-pack/svelte-simple-icons';
+
+  export let icon: SiComponentType;
+  export let text: string;
+  export let click: () => void = () => console.log('do something');
+</script>
+
+<button on:click={click}>
+  <svelte:component
+    this={icon}
+    title={text} <!-- optional, along with size and color properties --> 
+  />
+  {text}
+</button>
+
+<style lang="scss">
+  button {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: border-color 0.25s;
+    box-shadow: none;
+    text-shadow: none;
+  }
+
+  .icon {
+    margin: 4px 4px 0 0;
+  }
+</style>
+```
+
+## Faster Compilations
+
+If you only need a few icons, you can import them individually instead of the entire file to improve compilation.
+
+```svelte
+<script>
+  import SiSvelte from "@icons-pack/svelte-simple-icons/icons/SiSvelte.svelte";
+  import SiGithub from "@icons-pack/svelte-simple-icons/icons/SiGithub.svelte";
+</script>
+
+<SiGithub />
+<SiSvelte />
+```
