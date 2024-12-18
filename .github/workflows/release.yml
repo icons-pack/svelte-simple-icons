@@ -22,7 +22,7 @@ jobs:
 
       - name: 🔥 Setup corepack
         run: | 
-          corepack enable && corepack prepare pnpm@9.15.0 --activate
+          corepack enable
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v4
@@ -51,7 +51,7 @@ jobs:
       - name: Create Release Pull Request or Publish to GitHub Packages 📦
         uses: changesets/action@v1
         with:
-          publish: yarn release
+          publish: pnpm release
           commit: "ci(Release): version icons-pack/react-simple-icons"
           title: "ci(Release): version icons-pack/react-simple-icons"
         env:
