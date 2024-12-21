@@ -2,6 +2,7 @@
 	"name": "@icons-pack/svelte-simple-icons",
 	"version": "4.0.1",
 	"publishConfig": {
+		"provenance": true,
 		"access": "public"
 	},
 	"engines": {
