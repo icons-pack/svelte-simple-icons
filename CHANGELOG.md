@@ -1,5 +1,11 @@
 # @icons-pack/svelte-simple-icons
 
+## 4.0.2
+
+### Patch Changes
+
+- [#97](https://github.com/icons-pack/svelte-simple-icons/pull/97) [`8f58dea`](https://github.com/icons-pack/svelte-simple-icons/commit/8f58deae9356464aeb80642f88b56d3695f3ecc1) Thanks [@xeho91](https://github.com/xeho91)! - Widen `peerDependencies` range - add support for Svelte `v5`
+
 ## 4.0.1
 
 ### Patch Changes
