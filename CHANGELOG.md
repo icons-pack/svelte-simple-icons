@@ -1,5 +1,15 @@
 # @icons-pack/svelte-simple-icons
 
+## 5.0.0
+
+### Major Changes
+
+- [`68e21e3`](https://github.com/icons-pack/svelte-simple-icons/commit/68e21e36096ce188ef354e13340ba56b20e61789) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump simple-icons@14.7.0
+
+### Minor Changes
+
+- [`5735de1`](https://github.com/icons-pack/svelte-simple-icons/commit/5735de13e754052a15724d380c2e63f0ecba322e) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump simple-icons@14.7.0
+
 ## 4.0.2
 
 ### Patch Changes
