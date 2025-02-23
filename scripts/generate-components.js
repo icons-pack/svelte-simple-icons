@@ -29,11 +29,13 @@ fs.writeFileSync(pathIndexExport, "", formatFile);
 const attrsToString = (attrs) => {
   return Object.keys(attrs)
     .map((key) => {
-      if (key === "width" || key === "height" || key === "fill") {
-        return key + "={" + attrs[key] + "}";
+      if(key === "class") {
+        return `class={className}`
+      } else if (key === "width" || key === "height" || key === "fill") {
+        return `${key}={${attrs[key]}}`;
       }
 
-      return key + '="' + attrs[key] + '"';
+      return `${key}="${attrs[key]}"`;
     })
     .join(" ");
 };
@@ -41,7 +43,7 @@ const attrsToString = (attrs) => {
 const exportType = `
 import type { ComponentType, SvelteComponent } from 'svelte';
 
-export type SiComponentType = ComponentType<SvelteComponent<{ color?: string; size?: string; title?: string; }>>;
+export type SiComponentType = ComponentType<SvelteComponent<{ color?: string; size?: string; title?: string; class?: string; }>>;
 
 `
 fs.appendFileSync(pathIndexExport, exportType, formatFile);
@@ -62,20 +64,22 @@ ICONS.forEach((icon) => {
     height: "size",
     fill: "color",
     viewBox: "0 0 24 24",
+    class: "",
   };
 
-  const element = `
-    <script>
-      export let color = 'currentColor';
-      export let size = 24;
-      export let title = "${baseName}";
-    </script>
+  const element = `<script>
+  let {
+    color = 'currentColor',
+    title = "${baseName}",
+    class: className = '',
+    size = 24,
+  } = $props();
+</script>
 
-    <svg ${attrsToString(defaultAttrs)}>
-      <title>{title}</title>
-      <path d="${SimpleIcons[baseName].path}" />
-    </svg>
-  `;
+<svg ${attrsToString(defaultAttrs)}>
+  <title>{title}</title>
+  <path d="${SimpleIcons[baseName].path}" />
+</svg>`;
 
   const component = element;
 
