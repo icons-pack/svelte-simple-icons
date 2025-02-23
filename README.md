@@ -3,7 +3,7 @@
 
 # svelte-simple-icons
 
-This package provides the [Simple Icons 14.7.0](https://github.com/simple-icons/simple-icons/releases/tag/14.7.0) packaged as a set of [Svelte](https://svelte.dev/) components.
+This package provides the [Simple Icons 14.8.0](https://github.com/simple-icons/simple-icons/releases/tag/14.8.0) packaged as a set of [Svelte](https://svelte.dev/) components.
 
   <a href="https://www.npmjs.com/package/@icons-pack/svelte-simple-icons" target="_blank">
     <img src="https://img.shields.io/npm/v/@icons-pack/svelte-simple-icons?color=CB061D&style=flat-square" alt="www.npmjs.com!" />
@@ -27,10 +27,10 @@ This package provides the [Simple Icons 14.7.0](https://github.com/simple-icons/
 Install the package in your project directory with:
 
 ```sh
-// with yarn
+# with yarn
 yarn add @icons-pack/svelte-simple-icons
 
-// with npm
+# with npm
 npm add @icons-pack/svelte-simple-icons
 ```
 
@@ -45,83 +45,51 @@ All icons are imported from a single file, where [ICON SLUG] is replaced by a ca
 ## Basic example
 
 ```svelte
-  <!-- Import a specific icon by its slug as: -->
-  <!-- import { Si[ICON SLUG] } from 'simple-icons'; -->
+<!-- Import a specific icon by its slug as: -->
+<!-- import { Si[ICON SLUG] } from '@icons-pack/svelte-simple-icons'; -->
 
-  <script>
-    import { SiReact, SiSvelte, SiDocker } from "@icons-pack/svelte-simple-icons";
-  </script>
+<script>
+  import { SiReact, SiSvelte, SiDocker } from "@icons-pack/svelte-simple-icons";
+</script>
 
-  <SiSvelte color="#FF3E00" size={90} />
+<SiSvelte color="#FF3E00" size={90} />
 
-  <SiReactJs color="#61DAFB" size={50} />
+<SiReact color="#61DAFB" size={50} />
 
-  <SiDocker />
+<SiDocker />
 ```
 
 ## Change title
 
 ```svelte
-  <!-- title default "Svelte" -->
-  <script>
-    import { SiSvelte } from "@icons-pack/svelte-simple-icons";
-  </script>
+<!-- title default "Svelte" -->
+<script>
+  import { SiSvelte } from "@icons-pack/svelte-simple-icons";
+</script>
 
-  <SiSvelte title="My title" />
+<SiSvelte title="My title" />
 ```
 
 ## Custom styles
 
 ```svelte
-  <script>
-    import { SiSvelte } from "@icons-pack/svelte-simple-icons";
-  </script>
-
-  <SiSvelte class="myStyle" />
-
-  <style>
-    .myStyle {
-      width: 35px;
-      height: 35px;
-    }
-  </style>
-```
-
-## Type Definition for Dynamic Icons in Svelte Components
-
-Sometimes, we want to provide the component dynamically to a component. We can do that by using `svelte:component` feature with the
-helper type `SiComponentType` type definition.
-
-```svelte
-<script lang="ts">
-  import type { SiComponentType } from '@icons-pack/svelte-simple-icons';
-
-  export let icon: SiComponentType;
-  export let text: string;
-  export let click: () => void = () => console.log('do something');
+<script>
+  import { SiSvelte } from "@icons-pack/svelte-simple-icons";
 </script>
 
-<button on:click={click}>
-  <svelte:component
-    this={icon}
-    title={text} <!-- optional, along with size and color properties -->
-  />
-  {text}
-</button>
+<SiSvelte class="myStyle" />
 
-<style lang="scss">
-  button {
-    display: flex;
-    flex-direction: row;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: border-color 0.25s;
-    box-shadow: none;
-    text-shadow: none;
+<style>
+  :global(.myStyle) {
+    color: #ff3e00;
+    width: 8rem;
+    height: 8rem;
+    transition: transform 0.4s;
   }
 
-  .icon {
-    margin: 4px 4px 0 0;
+  :global(.myStyle:hover) {
+    transform: rotateZ(180deg);
+    transform-style: preserve-3d;
   }
 </style>
 ```
@@ -132,8 +100,8 @@ If you only need a few icons, you can import them individually instead of the en
 
 ```svelte
 <script>
-  import SiSvelte from "@icons-pack/svelte-simple-icons/icons/SiSvelte.svelte";
-  import SiGithub from "@icons-pack/svelte-simple-icons/icons/SiGithub.svelte";
+  import SiSvelte from "@icons-pack/svelte-simple-icons/icons/SiSvelte";
+  import SiGithub from "@icons-pack/svelte-simple-icons/icons/SiGithub";
 </script>
 
 <SiGithub />
