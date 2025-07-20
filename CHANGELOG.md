@@ -1,5 +1,11 @@
 # @icons-pack/svelte-simple-icons
 
+## 6.3.0
+
+### Minor Changes
+
+- [`7498e91`](https://github.com/icons-pack/svelte-simple-icons/commit/7498e911323d94f6e8d4f565a798fc0cf5f3bef8) Thanks [@LitoMore](https://github.com/LitoMore)! - Bump simple-icons@15.7.0
+
 ## 6.2.0
 
 ### Minor Changes
