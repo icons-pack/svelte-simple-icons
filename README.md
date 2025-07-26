@@ -22,12 +22,8 @@ This package provides the [Simple Icons 15.7.0](https://github.com/simple-icons/
 
 Install the package in your project directory with:
 
-```sh
-// with yarn
-yarn add @icons-pack/svelte-simple-icons
-
-// with npm
-npm add @icons-pack/svelte-simple-icons
+```shell
+npm i @icons-pack/svelte-simple-icons
 ```
 
 ## Usage
