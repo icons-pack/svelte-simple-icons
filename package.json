@@ -47,11 +47,12 @@
   ],
   "scripts": {
     "clean": "rm -rf index.* package",
-    "build": "pnpm clean && pnpm check && svelte-package && node ./scripts/clean_package.js",
+    "build": "pnpm clean && pnpm check && svelte-package && node ./scripts/clean_package.mjs",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "clean:icons": "rm -rf ./src/lib/icons/**",
-    "generate:icons": "pnpm clean:icons && node ./scripts/generate-components.js",
+    "bump": "pnpm install -D simple-icons@latest && node scripts/update-readme.mjs",
+    "generate:icons": "pnpm clean:icons && node ./scripts/generate-components.mjs",
     "changeset": "changeset",
     "version": "changeset version",
     "release": "changeset publish"

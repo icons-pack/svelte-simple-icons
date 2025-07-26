@@ -1,14 +1,11 @@
-import fs from "fs";
-import path from "path";
+import fs from "node:fs/promises";
+import path from "node:path";
 import upperCamelCase from "uppercamelcase";
 
 import * as SimpleIcons from "simple-icons";
 
-
-let __dirname = path.dirname(new URL(import.meta.url).pathname);
-
 const formatFile = "utf-8";
-const rootDir = path.join(__dirname, "..");
+const rootDir = path.join(import.meta.dirname, "..");
 const dir = path.join(rootDir, "src/lib/");
 const outputComponent = "src/lib/icons";
 
@@ -16,15 +13,23 @@ const pathIndexExport = path.join(rootDir, "src/lib", "index.ts");
 
 const ICONS = Object.keys(SimpleIcons);
 
-if (!fs.existsSync(dir)) {
-  fs.mkdirSync(dir);
+const fileExists = async (target) =>
+  fs
+    .access(target)
+    .then(() => true)
+    .catch(() => false);
+
+const dirExists = await fileExists(dir);
+if (!dirExists) {
+  await fs.mkdir(dir);
 }
 
-if (!fs.existsSync(outputComponent)) {
-  fs.mkdirSync(outputComponent);
+const outputComponentExists = await fileExists(outputComponent);
+if (!outputComponentExists) {
+  await fs.mkdir(outputComponent);
 }
 
-fs.writeFileSync(pathIndexExport, "", formatFile);
+await fs.writeFile(pathIndexExport, "", formatFile);
 
 const attrsToString = (attrs) => {
   return Object.keys(attrs)
@@ -43,10 +48,10 @@ import type { ComponentType, SvelteComponent } from 'svelte';
 
 export type SiComponentType = ComponentType<SvelteComponent<{ color?: string; size?: string; title?: string; }>>;
 
-`
-fs.appendFileSync(pathIndexExport, exportType, formatFile);
+`;
+await fs.appendFile(pathIndexExport, exportType, formatFile);
 
-ICONS.forEach((icon) => {
+for (const icon of ICONS) {
   const baseName = String(icon);
   const componentName = upperCamelCase(baseName);
 
@@ -79,11 +84,11 @@ ICONS.forEach((icon) => {
 
   const component = element;
 
-  fs.writeFileSync(locationOutputComponent, component, formatFile);
+  await fs.writeFile(locationOutputComponent, component, formatFile);
 
   const exportComponent = `export { default as ${componentName} } from './icons/${componentName}.svelte';\r\n`;
 
-  fs.appendFileSync(pathIndexExport, exportComponent, formatFile);
-});
+  await fs.appendFile(pathIndexExport, exportComponent, formatFile);
+}
 
 console.log("Ready icons");
