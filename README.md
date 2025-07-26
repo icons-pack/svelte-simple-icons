@@ -9,10 +9,6 @@ This package provides the [Simple Icons 15.7.0](https://github.com/simple-icons/
     <img src="https://img.shields.io/npm/v/@icons-pack/svelte-simple-icons?color=CB061D&style=flat-square" alt="www.npmjs.com!" />
   </a>
 
-  <a href="https://travis-ci.com/github/icons-pack/svelte-simple-icons" target="_blank">
-    <img src="https://img.shields.io/travis/icons-pack/svelte-simple-icons?color=008660&style=flat-square" alt="builds!" />
-  </a>
-
   <a href="https://www.npmjs.com/package/@icons-pack/svelte-simple-icons" target="_blank">
     <img src="https://img.shields.io/npm/dw/@icons-pack/svelte-simple-icons?color=087BB4&style=flat-square" alt="downloads" />
   </a>
