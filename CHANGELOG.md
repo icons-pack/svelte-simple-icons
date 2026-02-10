@@ -1,5 +1,11 @@
 # @icons-pack/svelte-simple-icons
 
+## 7.0.1
+
+### Patch Changes
+
+- [`434371b`](https://github.com/icons-pack/svelte-simple-icons/commit/434371b2b96a55e67563525c7c5a2523b78a9f1e) Thanks [@wootsbot](https://github.com/wootsbot)! - Fixed deploy package
+
 ## 7.0.0
 
 ### Major Changes
