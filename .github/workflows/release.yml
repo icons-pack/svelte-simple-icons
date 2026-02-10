@@ -27,26 +27,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: package.json
-          registry-url: https://registry.npmjs.org/
 
-      - name: 🔥 Installing pnpm
-        run: |
-          corepack enable
-          corepack prepare pnpm@${{ env.PNPM_VERSION }} --activate
-
-      - name: 📦 Install Dependencies
-        run: |
-          pnpm --version && pnpm install --frozen-lockfile
+      - name: Install Dependencies 📦
+        uses: ./.github/actions/install
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 🔥 Run generate:icons
-        run: pnpm run generate:icons
+      - name: 🔥 generate:icons
+        run: pnpm generate:icons
 
-      - name: 💣 Run build
-        run: pnpm run build
+      - name: 💣 build
+        run: pnpm build
 
       # - name: Delete tags
       #   run: |
@@ -60,4 +51,4 @@ jobs:
           title: "ci(Release): version icons-pack/react-simple-icons"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NPM_CONFIG_PROVENANCE: true

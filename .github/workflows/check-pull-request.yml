@@ -17,25 +17,22 @@ jobs:
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
 
-      - uses: actions/checkout@v4      
-
-      - name: 🔥 Setup corepack
-        run: corepack enable
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v4
         with:
           node-version-file: package.json
-          cache: "pnpm"
 
-      - name: 📦 Install Dependencies
-        run: |
-          pnpm --version && pnpm install --frozen-lockfile
+      - name: Install Dependencies 📦
+        uses: ./.github/actions/install
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 🔥 Run generate:icons
-        run: pnpm run generate:icons
+      - name: 🔥 generate:icons
+        run: pnpm generate:icons
 
-      - name: 💣 Run build
-        run: pnpm run build
+      - name: 💣 build
+        run: pnpm build
