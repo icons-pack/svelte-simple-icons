@@ -7,15 +7,21 @@ on:
   push:
     branches:
       - main
+
   release:
     types: [created]
 
-env:
-  PNPM_VERSION: 9.15.0
-
 jobs:
   publish-npm:
+    name: Release
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write # to create release (changesets/action)
+      issues: write # to post issue comments (changesets/action)
+      pull-requests: write # to create pull request (changesets/action)
+      id-token: write # to use OpenID Connect token for provenance (changesets/action)
+
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
