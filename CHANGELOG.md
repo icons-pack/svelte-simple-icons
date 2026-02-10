@@ -1,5 +1,33 @@
 # @icons-pack/svelte-simple-icons
 
+## 7.0.0
+
+### Major Changes
+
+- [`3b9e3af`](https://github.com/icons-pack/svelte-simple-icons/commit/3b9e3afde7e45254dad11223bdf6a4f34c23c27c) Thanks [@wootsbot](https://github.com/wootsbot)! - Migrate to Svelte 5 runes syntax
+
+  ### Breaking Changes
+
+  - **Minimum Svelte version**: Now requires `svelte ^5.0.0` (dropped Svelte 4 support)
+  - **Component syntax**: Migrated from `export let` to `$props()` runes
+  - **Type export**: `SiComponentType` now uses `Component<...>` instead of `ComponentType<SvelteComponent<...>>`
+  - **`size` prop type**: Changed from `string` to `number`
+
+  ### New Features
+
+  - Components now support rest props via `{...rest}` spread on `<svg>`, allowing custom attributes like `class`, `aria-*`, `data-*`, etc.
+
+  ### Dependencies
+
+  - svelte: 4.2.12 → 5.50.1
+  - @sveltejs/kit: 2.5.4 → 2.50.2
+  - @sveltejs/vite-plugin-svelte: 3.0.2 → 6.2.4
+  - vite: 5.2.6 → 7.3.1
+
+### Patch Changes
+
+- [`061397b`](https://github.com/icons-pack/svelte-simple-icons/commit/061397bf82faa1363828491d52ab6adbb20c0d20) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump simple icons
+
 ## 6.5.0
 
 ### Minor Changes
