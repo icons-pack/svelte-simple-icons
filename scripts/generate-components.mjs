@@ -44,9 +44,9 @@ const attrsToString = (attrs) => {
 };
 
 const exportType = `
-import type { ComponentType, SvelteComponent } from 'svelte';
+import type { Component } from 'svelte';
 
-export type SiComponentType = ComponentType<SvelteComponent<{ color?: string; size?: string; title?: string; }>>;
+export type SiComponentType = Component<{ color?: string; size?: number; title?: string; [key: string]: unknown; }>;
 
 `;
 await fs.appendFile(pathIndexExport, exportType, formatFile);
@@ -71,12 +71,10 @@ for (const icon of ICONS) {
 
   const element = `
     <script>
-      export let color = 'currentColor';
-      export let size = 24;
-      export let title = "${baseName}";
+      let { color = 'currentColor', size = 24, title = "${baseName}", ...rest } = $props();
     </script>
 
-    <svg ${attrsToString(defaultAttrs)}>
+    <svg ${attrsToString(defaultAttrs)} {...rest}>
       <title>{title}</title>
       <path d="${SimpleIcons[baseName].path}" />
     </svg>
