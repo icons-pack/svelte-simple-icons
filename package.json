@@ -61,7 +61,7 @@
 		"@changesets/changelog-github": "0.5.2",
 		"@changesets/cli": "2.29.8",
 		"@sveltejs/adapter-auto": "7.0.0",
-		"@sveltejs/kit": "2.50.2",
+		"@sveltejs/kit": "2.52.2",
 		"@sveltejs/package": "2.5.7",
 		"@sveltejs/vite-plugin-svelte": "6.2.4",
 		"signale": "1.4.0",
