@@ -65,7 +65,7 @@
 		"@sveltejs/package": "2.5.7",
 		"@sveltejs/vite-plugin-svelte": "6.2.4",
 		"signale": "1.4.0",
-		"simple-icons": "16.8.0",
+		"simple-icons": "16.10.0",
 		"svelte": "5.50.1",
 		"svelte-check": "4.3.6",
 		"tslib": "2.8.1",
