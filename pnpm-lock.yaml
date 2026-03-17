@@ -30,8 +30,8 @@ importers:
         specifier: 1.4.0
         version: 1.4.0
       simple-icons:
-        specifier: 16.10.0
-        version: 16.10.0
+        specifier: 16.12.0
+        version: 16.12.0
       svelte:
         specifier: 5.50.1
         version: 5.50.1
@@ -988,8 +988,8 @@ packages:
     resolution: {integrity: sha512-iuh+gPf28RkltuJC7W5MRi6XAjTDCAPC/prJUpQoG4vIP3MJZ+GTydVnodXA7pwvTKb2cA0m9OFZW/cdWy/I/w==}
     engines: {node: '>=6'}
 
-  simple-icons@16.10.0:
-    resolution: {integrity: sha512-62kuxaG3pE+cFNerudUtwb9BLmudzayHrlHkvU9gf8Nxcj7VYOm9dh3WNbGaFk60aQtfnRyzViZaouFG2B45kg==}
+  simple-icons@16.12.0:
+    resolution: {integrity: sha512-fDJDqXUpkb2twqH+eBQpJsCYUE6jEH7VkuuPL9dH16sbLf6KKnwyijULmcx7SCoy3c2L6pl8WCzt+4rpYjoWfw==}
     engines: {node: '>=0.12.18'}
 
   sirv@3.0.2:
@@ -2007,7 +2007,7 @@ snapshots:
       figures: 2.0.0
       pkg-conf: 2.1.0
 
-  simple-icons@16.10.0: {}
+  simple-icons@16.12.0: {}
 
   sirv@3.0.2:
     dependencies:
